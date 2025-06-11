@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events-Section</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+    .get {
+        color: white;
+        text-decoration: none;
+        border: solid #5fcf80;
+        padding: 7px 18px;
+        border-radius: 50px;
+        background-color: #5fcf80;
+        border: none;
+    }
+
+    .get:hover {
+        background-color: rgba(64, 225, 136, 0.845);
+    }
+ .navbar {
+        font-size: 20px;
+    }
+    .navbar-nav .nav-link:hover {
+        color: #5fcf80 !important;
+    }
+
+    .navbar-brand {
+        color: #5fcf80 !important;
+    }
+
+    .about-content {
+        font-size: 18px;
+    }
+
+    .main-header {
+        background-color: #5fcf80;
+        color: white;
+        padding: 60px 280px;
+    }
+
+    .header-part {
+        background-color: #21bd50de;
+        color: white;
+        padding: 20px 60px;
+    }
+
+    /* events-section */
+    .event-box {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .event-img-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .event-img-container img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
+    }
+
+    .event-box:hover .event-img-container img {
+        transform: scale(0.95);
+        /* Zoom-out */
+    }
+
+    .event-title {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 6px 12px;
+        transition: color 0.3s ease;
+    }
+
+    .event-box:hover .event-title {
+        color: #28a745;
+        /* Green on hover */
+    }
+
+    .event-content {
+        padding: 20px;
+        border-top: 4px solid transparent;
+        transition: border-top 0.3s ease;
+    }
+
+    .event-box:hover .event-content {
+        border-top: 4px solid #28a745;
+    }
+
+    .event-date {
+        font-style: italic;
+        font-size: 15px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .event-text {
+        font-size: 15px;
+        color: #444;
+    }
+
+    @media (max-width: 767px) {
+        .event-title {
+            font-size: 18px;
+        }
+
+        .event-text {
+            font-size: 14px;
+        }
+    }
+
+    /* FOOTER-SeCTION */
+    .footer {
+        background: #f9f9f9;
+        margin-top: 100px;
+        padding: 40px 0 20px;
+        font-family: Arial, sans-serif;
+        color: #333;
+    }
+
+    .footer-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .footer-info,
+    .footer-links,
+    .footer-services,
+    .footer-newsletter {
+        flex: 1 1 220px;
+        margin: 20px;
+    }
+
+    .footer h3,
+    .footer h4 {
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .footer p,
+    .footer ul {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .footer ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .footer ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer ul li a {
+        text-decoration: none;
+        color: #333;
+        transition: 0.3s;
+    }
+
+    .footer ul li a:hover {
+        color: #28a745;
+    }
+
+    .social-links a {
+        text-decoration: none;
+        display: inline-block;
+        background: #fff;
+        color: #333;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+        padding: 8px 10px;
+        border-radius: 50%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .social-links a:hover {
+        color: #28a745;
+        border-color: #28a745;
+    }
+
+    .footer-newsletter form {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .footer-newsletter input[type="email"] {
+        padding: 8px;
+        width: 70%;
+        border: 1px solid #ccc;
+        border-radius: 25px 0 0 25px;
+        outline: none;
+    }
+
+    .footer-newsletter button {
+        padding: 8px 16px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .footer-newsletter button:hover {
+        background: #218838;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding: 20px 10px 0;
+        font-size: 14px;
+        background: #f1f1f1;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .footer-details {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-info,
+        .footer-links,
+        .footer-services,
+        .footer-newsletter {
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .footer-newsletter form {
+            flex-direction: column;
+        }
+
+        .footer-newsletter input[type="email"],
+        .footer-newsletter button {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    }
+
+    .gc {
+        color: #29d161;
+    }
+
+    .trainer-info {
+        margin-left: 90px;
+    }
+</style>
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm pt-4 pb-4">
+        <div class="container-fluid container-xl">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <h1 class="m-0 fw-semibold fs-2">MENTOR</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="trainers.html">Trainers</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-link active" href="#" id="dropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+                            <li class="dropdown-submenu dropend">
+                                <a class="dropdown-item dropdown-toggle" href="#">Deep Dropdown</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 3</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 4</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+
+                <a href="courses.html" class="get ms-lg-3">Get Started</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header>
+        <section class="main-header" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h6 class="text-center fs-1 fw-bolder">
+                            Trainers
+                        </h6>
+                        <p class="text-center about-content mt-2">AI Overview
+                            Events serve diverse purposes, ranging from celebration and entertainment to education,
+                            networking, and community building. Their primary goal is to create meaningful experiences
+                            and achieve specific objectives tailored to the event's context and target audience. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-5 header-part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="fw-semibold">Home</span><span class="opacity-50">/</span><span
+                            class="fw-semibold">Events</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- Events-Section -->
+    <div class="container mb-5 mt-3">
+        <div class="row">
+            <!-- First Column -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="event-box">
+                    <div class="event-img-container">
+                        <img src="./images/events-item-1.jpg" alt="Web Design">
+                        <div class="event-title opacity-75">Introduction to webdesign</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">Sunday, September 26th at 7:00 pm</div>
+                        <div class="event-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut
+                            labore et dolore magna aliqua.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Column -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="event-box">
+                    <div class="event-img-container">
+                        <img src="./images/events-item-2.jpg" alt="Marketing Strategies">
+                        <div class="event-title opacity-7">Marketing Strategies</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">Sunday, November 15th at 7:00 pm</div>
+                        <div class="event-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            doloremque laudantium, totam rem aperiam.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About FOOTER// -->
+    <footer class="footer">
+        <div class="container footer-details">
+            <div class="footer-info">
+                <h3>Mentor</h3>
+                <p>
+                    A108 Adam Street<br>
+                    New York, NY 535022<br><br>
+                    <strong>Phone:</strong> +92 308 000 05<br>
+                    <strong>Email:</strong> ramzanchhena@gmail.com<br>
+                </p>
+                <div class="social-links opacity-75">
+                    <a href="#" class="twitter"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="#" class="facebook"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#" class="instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="linkedin"><i class="ri-linkedin-box-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-services">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Product Management</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Our Newsletter</h4>
+                <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                <form action="#">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© Copyright <strong>Mentor</strong>. All Rights Reserved</p>
+            <p>Designed by <span class="gc">BootstrapMade</span> Distributed by <span class="gc">ThemeWagon</span></p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</html>

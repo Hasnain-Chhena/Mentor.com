@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aout-section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+    .get {
+        color: white;
+        text-decoration: none;
+        border: solid #5fcf80;
+        padding: 7px 18px;
+        border-radius: 50px;
+        background-color: #5fcf80;
+        border: none;
+    }
+
+    .get:hover {
+        background-color: rgba(64, 225, 136, 0.845);
+    }
+ .navbar {
+        font-size: 20px;
+    }
+    .navbar-nav .nav-link:hover {
+        color: #5fcf80 !important;
+    }
+
+    .navbar-brand {
+        color: #5fcf80 !important;
+    }
+
+    .about-content {
+        font-size: 18px;
+    }
+
+    .main-header {
+        background-color: #5fcf80;
+        color: white;
+        padding: 60px 280px;
+    }
+
+    .header-part {
+        background-color: #21bd50de;
+        color: white;
+        padding: 20px;
+        padding-left: 150px;
+    }
+
+    .about-section {
+        background-color: #fff;
+    }
+
+    .about-section h2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #2c2c2c;
+    }
+
+    .about-section .subtitle {
+        color: #666;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .feature-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .feature-list li {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #444;
+    }
+
+    .feature-list i {
+        color: #5fcf80;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    .btn-read-more {
+        display: inline-block;
+        background-color: #5fcf80;
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    .btn-read-more:hover {
+        background-color: #45b96e;
+        color: #fff;
+    }
+
+    /* countdown */
+    .counter-section {
+        background-color: #f9f9f9;
+        padding: 30px 20px;
+        margin: 30px 0px;
+    }
+
+    .counter {
+        font-size: 40px;
+        font-weight: 700;
+        color: #5fcf80;
+        margin-bottom: 10px;
+    }
+
+    .counter-section p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    /* Testimonials */
+    .testimonial-section {
+        padding: 60px 0;
+        background-color: #fff;
+    }
+
+    .testimonial-title {
+        text-align: center;
+        text-transform: uppercase;
+        color: #888;
+        font-weight: 500;
+    }
+
+    .testimonial-title strong {
+        display: block;
+        font-size: 32px;
+        color: #333;
+    }
+
+    .testimonial {
+        background: #fff;
+        border: 1px solid #eee;
+        padding: 25px;
+        border-radius: 5px;
+        min-height: 250px;
+        display: flex;
+    }
+
+    .testimonial img {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-right: 15px;
+    }
+
+    .testimonial h5 {
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .testimonial small {
+        color: #999;
+    }
+
+    .testimonial .stars {
+        color: #f1c40f;
+    }
+
+    .testimonial .quote {
+        font-style: italic;
+        color: #555;
+        margin-top: 10px;
+        padding-left: 25px;
+        position: relative;
+    }
+
+    .testimonial .quote::before {
+        content: "\f10d";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: #28a745;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        background-color: #28a745;
+    }
+
+    /* about footer/ */
+    .footer {
+        background: #f9f9f9;
+        padding: 40px 0 20px;
+        font-family: Arial, sans-serif;
+        color: #333;
+    }
+
+    .footer-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .footer-info,
+    .footer-links,
+    .footer-services,
+    .footer-newsletter {
+        flex: 1 1 220px;
+        margin: 20px;
+    }
+
+    .footer h3,
+    .footer h4 {
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .footer p,
+    .footer ul {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .footer ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .footer ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer ul li a {
+        text-decoration: none;
+        color: #333;
+        transition: 0.3s;
+    }
+
+    .footer ul li a:hover {
+        color: #28a745;
+    }
+
+    .social-links a {
+        text-decoration: none;
+        display: inline-block;
+        background: #fff;
+        color: #333;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+        padding: 8px 10px;
+        border-radius: 50%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .social-links a:hover {
+        color: #28a745;
+        border-color: #28a745;
+    }
+
+    .footer-newsletter form {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .footer-newsletter input[type="email"] {
+        padding: 8px;
+        width: 70%;
+        border: 1px solid #ccc;
+        border-radius: 25px 0 0 25px;
+        outline: none;
+    }
+
+    .footer-newsletter button {
+        padding: 8px 16px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .footer-newsletter button:hover {
+        background: #218838;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding: 20px 10px 0;
+        font-size: 14px;
+        background: #f1f1f1;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .footer-details {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-info,
+        .footer-links,
+        .footer-services,
+        .footer-newsletter {
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .footer-newsletter form {
+            flex-direction: column;
+        }
+
+        .footer-newsletter input[type="email"],
+        .footer-newsletter button {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    }
+
+    .gc {
+        color: #29d161;
+    }
+
+    .trainer-info {
+        margin-left: 90px;
+    }
+</style>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm pt-4 pb-4">
+        <div class="container-fluid container-xl">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <h1 class="m-0 fw-semibold fs-2">MENTOR</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="trainers.html">Trainers</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-link active" href="#" id="dropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+                            <li class="dropdown-submenu dropend">
+                                <a class="dropdown-item dropdown-toggle" href="#">Deep Dropdown</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 3</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 4</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+
+                <a href="courses.html" class="get ms-lg-3">Get Started</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header class="main-header" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h6 class="text-center fs-1 fw-bolder">
+                        About Us
+                    </h6>
+                    <p class="text-center about-content mt-2">The primary purpose of a mentor is to guide and support a
+                        mentee's personal and professional growth. Mentors provide advice, share their experience, and
+                        help mentees navigate challenges,make their own decisions and find their path.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="header-part" data-aos="fade-up">
+        <div class="row">
+            <div class="col-md-12 ">
+                <span class="fw-semibold">Home</span><span class="opacity-50">/</span><span
+                    class="fw-semibold">About</span>
+            </div>
+        </div>
+    </section>
+    <!-- aboputsection -->
+    <section class="about-section">
+        <div class="container mt-5 mb-5">
+            <div class="row align-items-center">
+                <!-- Left content -->
+                <div class="col-md-6 mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <h2>Voluptatem dignissimos provident quasi corporis</h2>
+                    <p class="subtitle">
+                        <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</em>
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="ri-edit-circle-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </li>
+                        <li><i class="ri-edit-circle-line"></i> Duis aute irure dolor in reprehenderit in voluptate
+                            velit.</li>
+                        <li><i class="ri-edit-circle-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu
+                            fugiat nulla pariatur.</li>
+                    </ul>
+                    <a href="#more" class="btn-read-more">Read More →</a>
+                </div>
+                <!-- Right image -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="2500">
+                    <img src="./images/readmore-img.jpg" class="img-fluid" alt="Team Image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COUNTDOWN-->
+    <section class="counter-section" data-aos="fade-up" data-aos-duration="1500">
+        <div class="container">
+            <div class="row text-center pt-4 pb-0 justify-content-between">
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="1232">0</h2>
+                    <p>Students</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="64">0</h2>
+                    <p>Courses</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="42">0</h2>
+                    <p>Events</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="24">0</h2>
+                    <p>Trainers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 100; // Lower is faster
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+    </script>
+    <!-- Testimonials-->
+    <section class="testimonial-section" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+        data-aos-duration="2500">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="testimonial-title">TESTIMONIALS <strong>WHAT ARE THEY SAYING</strong></p>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="testimonial">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                                    <div>
+                                        <h5>John Larson</h5>
+                                        <small>Entrepreneur</small>
+                                        <div class="stars my-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i>
+                                        </div>
+                                        <p class="quote">Quis quorum aliqua sint quem legam fore sunt eram irure aliqua
+                                            veniam tempor.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+                                    <div>
+                                        <h5>Jane Smith</h5>
+                                        <small>Designer</small>
+                                        <div class="stars my-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <p class="quote">Dolor sit amet consectetur adipisicing elit. Obcaecati libero
+                                            minima asperiores.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="testimonial">
+                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="">
+                                    <div>
+                                        <h5>Saul Goodman</h5>
+                                        <small>CEO & Founder</small>
+                                        <div class="stars my-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i>
+                                        </div>
+                                        <p class="quote">Proin iaculis purus consequat sem cure digni ssim donec
+                                            porttitora entum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial">
+                                    <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="">
+                                    <div>
+                                        <h5>Emma White</h5>
+                                        <small>Manager</small>
+                                        <div class="stars my-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i
+                                                class="far fa-star"></i>
+                                        </div>
+                                        <p class="quote">Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                            qui officia.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="testimonial">
+                                    <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="">
+                                    <div>
+                                        <h5>Michael Brown</h5>
+                                        <small>Developer</small>
+                                        <div class="stars my-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="far fa-star"></i>
+                                        </div>
+                                        <p class="quote">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                            accusantium.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial">
+                                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="">
+                                    <div>
+                                        <h5>Linda Green</h5>
+                                        <small>Photographer</small>
+                                        <div class="stars my-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i
+                                                class="far fa-star"></i>
+                                        </div>
+                                        <p class="quote">Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                                            corporis suscipit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="testimonial">
+                                    <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="">
+                                    <div>
+                                        <h5>David Black</h5>
+                                        <small>Engineer</small>
+                                        <div class="stars my-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="far fa-star"></i><i
+                                                class="far fa-star"></i>
+                                        </div>
+                                        <p class="quote">Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                                            amet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial">
+                                    <img src="https://randomuser.me/api/portraits/women/27.jpg" alt="">
+                                    <div>
+                                        <h5>Alice Walker</h5>
+                                        <small>Teacher</small>
+                                        <div class="stars my-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i
+                                                class="far fa-star"></i>
+                                        </div>
+                                        <p class="quote">Quis autem vel eum iure reprehenderit qui in ea voluptate velit
+                                            esse.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="testimonial">
+                                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="">
+                                    <div>
+                                        <h5>Chris Evans</h5>
+                                        <small>Artist</small>
+                                        <div class="stars my-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i>
+                                        </div>
+                                        <p class="quote">Temporibus autem quibusdam et aut officiis debitis aut rerum
+                                            necessitatibus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial">
+                                    <img src="https://randomuser.me/api/portraits/women/61.jpg" alt="">
+                                    <div>
+                                        <h5>Nina Grace</h5>
+                                        <small>Writer</small>
+                                        <div class="stars my-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="far fa-star"></i><i
+                                                class="far fa-star"></i>
+                                        </div>
+                                        <p class="quote">Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                                            reiciendis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Indicators -->
+                <div class="carousel-indicators mt-4">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About FOOTER// -->
+    <footer class="footer">
+        <div class="container footer-details">
+            <div class="footer-info">
+                <h3>Mentor</h3>
+                <p>
+                    A108 Adam Street<br>
+                    New York, NY 535022<br><br>
+                    <strong>Phone:</strong> +92 308 000 05<br>
+                    <strong>Email:</strong> ramzanchhena@gmail.com<br>
+                </p>
+                <div class="social-links opacity-75">
+                    <a href="#" class="twitter"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="#" class="facebook"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#" class="instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="linkedin"><i class="ri-linkedin-box-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-services">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Product Management</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Our Newsletter</h4>
+                <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                <form action="#">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© Copyright <strong>Mentor</strong>. All Rights Reserved</p>
+            <p>Designed by <span class="gc">BootstrapMade</span> Distributed by <span class="gc">ThemeWagon</span></p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</html>

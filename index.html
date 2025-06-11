@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home-Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</he
+<body>
+    <style>
+        .get {
+            color: white;
+            text-decoration: none;
+            border: solid #5fcf80;
+            padding: 7px 18px;
+            border-radius: 50px;
+            background-color: #5fcf80;
+            border: none;
+        }
+
+        .get:hover {
+            background-color: rgba(64, 225, 136, 0.845);
+        }
+
+        .navbar {
+            font-size: 20px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #5fcf80 !important;
+        }
+
+        .navbar-brand {
+            color: #5fcf80 !important;
+        }
+
+        #herobg {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./images/hero-bg.jpg);
+            height: 800px;
+            background-size: cover;
+            margin-top: -140px;
+        }
+
+        .hero-cntnt {
+            color: white;
+            position: relative;
+            top: -460px;
+            right: 80px;
+            margin-left: 12px;
+        }
+
+        .btn-get-started {
+            display: inline-block;
+            padding: 10px 45px;
+            color: white;
+            border: 2px solid white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-get-started:hover {
+            background-color: #5fcf80;
+            border-color: #5fcf80;
+            color: white;
+        }
+
+        h1 {
+            font-weight: bolder;
+            font-size: 50px;
+        }
+
+        .about-section {
+            background-color: #fff;
+            position: relative;
+            top: -200px;
+        }
+
+        .about-section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c2c2c;
+        }
+
+        .about-section .subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .feature-list i {
+            color: #5fcf80;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .btn-read-more {
+            display: inline-block;
+            background-color: #5fcf80;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn-read-more:hover {
+            background-color: #45b96e;
+            color: #fff;
+        }
+
+        /* countdown */
+        .counter-section {
+            background-color: #f9f9f9;
+            padding: 30px 20px;
+            position: relative;
+            top: -100px;
+        }
+
+        .counter {
+            font-size: 40px;
+            font-weight: 700;
+            color: #5fcf80;
+            margin-bottom: 10px;
+        }
+
+        .counter-section p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* PRODCTS CHOOSE */
+        .product-card {
+            background-color: white;
+            border-radius: 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .header-section {
+            background-color: #5fcf80;
+            color: white;
+            padding: 40px;
+        }
+
+        .header-section h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .header-section h1:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #28a780;
+        }
+
+        .header-section p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .btn-learn-more {
+            background-color: #53c76e;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        .btn-learn-more:hover {
+            background-color: white;
+            color: #5fcf80;
+        }
+
+        .features-section {
+            padding: 40px;
+        }
+
+        .feature-item {
+            margin-bottom: 30px;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e9ecef;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: #5fcf80;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover .feature-icon {
+            background-color: #5fcf80;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .feature-item h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #212529;
+        }
+
+        .feature-item p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #dee2e6;
+            margin: 30px 0;
+        }
+
+        .windows-activate {
+            color: #6c757d;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+
+        .windows-activate strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* 3 col-divs */
+        .item-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #28a745;
+        }
+
+        .item-content {
+            padding: 20px;
+        }
+
+        .item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            color: #212529;
+            transition: color 0.3s ease;
+        }
+
+        .item-card:hover .item-title {
+            color: #28a745;
+        }
+
+        @media (max-width: 992px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .img-icons {
+            color: rgb(231, 80, 80);
+        }
+
+        .img-icons:hover {
+            color: orange;
+        }
+
+        .trainer-img {
+            height: 65px;
+            width: 60px;
+            border-radius: 55%;
+        }
+
+        .users {
+            margin-right: 10px;
+        }
+
+        .trainer-name:hover {
+            color: #5fcf80;
+        }
+
+        /* card-icons */
+        .navbar-icons {
+            gap: 5px;
+            /* space between icons */
+        }
+
+        .nav-icon {
+            color: rgba(0, 0, 0, 0.418);
+            /* light gray color like the image */
+            font-size: 32px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            text-align: center;
+        }
+
+        .nav-icon:hover {
+            color: #29d161;
+            /* change on hover (optional) */
+        }
+
+        /* footer// */
+        .footer {
+            background: #f9f9f9;
+            padding: 40px 0 20px;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .footer-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .footer-info,
+        .footer-links,
+        .footer-services,
+        .footer-newsletter {
+            flex: 1 1 220px;
+            margin: 20px;
+        }
+
+        .footer h3,
+        .footer h4 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer p,
+        .footer ul {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .footer ul li a:hover {
+            color: #28a745;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            display: inline-block;
+            background: #fff;
+            color: #333;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            padding: 8px 10px;
+            border-radius: 50%;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #28a745;
+            border-color: #28a745;
+        }
+
+        .footer-newsletter form {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .footer-newsletter input[type="email"] {
+            padding: 8px;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 25px 0 0 25px;
+            outline: none;
+        }
+
+        .footer-newsletter button {
+            padding: 8px 16px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 0 25px 25px 0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .footer-newsletter button:hover {
+            background: #218838;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 10px 0;
+            font-size: 14px;
+            background: #f1f1f1;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-details {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-info,
+            .footer-links,
+            .footer-services,
+            .footer-newsletter {
+                margin: 10px 0;
+                width: 100%;
+            }
+
+            .footer-newsletter form {
+                flex-direction: column;
+            }
+
+            .footer-newsletter input[type="email"],
+            .footer-newsletter button {
+                width: 100%;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+        }
+
+        .gc {
+            color: #29d161;
+        }
+
+        .trainer-info {
+            margin-left: 90px;
+        }
+    </style>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm pt-4 pb-4">
+        <div class="container-fluid container-xl">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <h1 class="m-0 fw-semibold fs-2">MENTOR</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="trainers.html">Trainers</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-link active" href="#" id="dropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+                            <li class="dropdown-submenu dropend">
+                                <a class="dropdown-item dropdown-toggle" href="#">Deep Dropdown</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 3</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 4</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Dropdown 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+
+                <a href="courses.html" class="get ms-lg-3">Get Started</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Home Bg-img -->
+    <section id="herobg">
+    </section>
+    <div class="container">
+        <div class="hero-cntnt" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="mb-2">Learning Today, <br>
+                Leading Tomorrow</h1>
+            <p class="fs-4 opacity-75 mb-5">We are team of talented designers making websites with Bootstrap</p>
+            <a href="#about" class="btn-get-started mt-1">Get Started</a>
+        </div>
+    </div>
+    <!-- team-cntnt-->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left content -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">
+                    <h2>Voluptatem dignissimos provident quasi corporis</h2>
+                    <p class="subtitle">
+                        <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</em>
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="ri-edit-circle-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </li>
+                        <li><i class="ri-edit-circle-line"></i> Duis aute irure dolor in reprehenderit in voluptate
+                            velit.</li>
+                        <li><i class="ri-edit-circle-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu
+                            fugiat nulla pariatur.</li>
+                    </ul>
+                    <a href="#more" class="btn-read-more">Read More →</a>
+                </div>
+
+                <!-- Right image -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="2500">
+                    <img src="./images/readmore-img.jpg" class="img-fluid" alt="Team Image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COUNTDOWN-->
+    <section class="counter-section" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="row text-center pt-4 pb-0 justify-content-between">
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="1232">0</h2>
+                    <p>Students</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="64">0</h2>
+                    <p>Courses</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="42">0</h2>
+                    <p>Events</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="24">0</h2>
+                    <p>Trainers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 100; // Lower is faster
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+    </script>
+    <!-- WHY YOU CHOOSE MY PRODUCTS-->
+    <div class="container mb-5" data-aos="fade-up" data-aos-duration="1500">
+        <div class="row product-card">
+            <!-- Left Column -->
+            <div class="col-md-6 header-section">
+                <h1>Why Choose Our Products?</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <p>Duis aute irure dolor in reprehenderit.</p>
+                <p>Aspertores dolores sed et. Teneur quia eos.</p>
+                <p>Autem tempore quibusdam vel necessitatibus optio ad corporis.</p>
+                <button class="btn btn-learn-more">Learn More</button>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-6 features-section">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas ri-battery-2-charge-line fs-2"></i>
+                    </div>
+                    <h2>Corporis voluptates officia elusmod</h2>
+                    <p>Consequentur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas ri-vip-diamond-line fs-2"></i>
+                    </div>
+                    <h2>Ultamco laboris ladore pan</h2>
+                    <p>Excepteur sint occaecat cupidat non proident, sunt in culpa qui officia deserunt</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fs-2 ri-store-2-line"></i>
+                    </div>
+                    <h2>Labore consequatur incidid dolore</h2>
+                    <p>Aut suscipit aut cum nemo deleniti ati omnis. Doloribus ut maiores omnis facere</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Column 1 -->
+    <div class="container" data-aos="fade-up" data-aos-duration="1500">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-eye-line img-icons"></i>
+                        <h3 class="item-title pt-2">Open Eye</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-user-heart-fill img-icons"></i>
+                        <h3 class="item-title pt-3">User Heart</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-hexagon-line img-icons"></i>
+                        <h3 class="item-title pt-3">Hexagon</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-text-direction-l img-icons"></i>
+                        <h3 class="item-title pt-3">Direction Indicator</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Column 2 -->
+    <div class="container mt-3" data-aos="fade-up" data-aos-duration="2500">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-arrow-left-right-fill img-icons"></i>
+                        <h3 class="item-title pt-3">Dirada Pack</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-star-line img-icons"></i>
+                        <h3 class="item-title pt-3">Opposite Direction</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-square-line img-icons"></i>
+                        <h3 class="item-title pt-3">Cube Shape</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-video-on-line img-icons"></i>
+                        <h3 class="item-title pt-2">Video Rec</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Column 3 -->
+    <div class="container mt-3 mb-5" data-aos="fade-up" data-aos-duration="3500">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-shape-line img-icons"></i>
+                        <h3 class="item-title pt-3">Dirada Pack</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-global-line img-icons"></i>
+                        <h3 class="item-title pt-3">Opposite Direction</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-pulse-fill img-icons"></i>
+                        <h3 class="item-title pt-3">Cube Shape</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="item-card">
+                    <div class="item-content d-flex gap-3 fs-2">
+                        <i class="ri-sun-line img-icons"></i>
+                        <h3 class="item-title pt-2">Video Rec</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 4 CARDS DIV -->
+    <div class="container mb-4" data-aos="fade-zoom-in" data-aos-duration="1000">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/game-dev.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex justify-content-between">
+                        <a href="#" class="btn btn-primary">Game Devlopment</a>
+                        <span class="fw-bold fs-5 opacity-75">$270</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Game Dev</h5>
+                        <p class="card-text">Process of designing, creating, and developing video games.It can also
+                            refer to individuals in that field.</p>
+                    </div>
+                    <hr class="fw-bolder opacity-75">
+                    <div class="d-flex justify-content-between p-2">
+                        <div>
+                            <img src="./images/lucifer.webp" alt="" class="trainer-img">
+                            <span class="trainer-name fw-semibold fs-4">Lucifer</span>
+                        </div>
+                        <div class="mt-3">
+                            <span class="users"><i class="ri-user-line trainer-name"></i>100</span>
+                            <span><i class="ri-heart-3-line trainer-name"></i>99</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/web-dev.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex justify-content-between">
+                        <a href="#" class="btn btn-primary">Web Development</a>
+                        <span class="fw-bold fs-5 opacity-75">$200</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Web Dev</h5>
+                        <p class="card-text">Process of designing, creating, and developing websites.It can also refer
+                            to individuals who field.</p>
+                    </div>
+                    <hr class="fw-bolder opacity-75">
+                    <div class="d-flex justify-content-between p-2">
+                        <div>
+                            <img src="./images/trainer-1.jpg" alt="" class="trainer-img">
+                            <span class="trainer-name fw-semibold fs-4">Antonio</span>
+                        </div>
+                        <div class="mt-3">
+                            <span class="users"><i class="ri-user-line trainer-name"></i>65</span>
+                            <span><i class="ri-heart-3-line trainer-name"></i>50</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/mobile-app-development.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex justify-content-between">
+                        <a href="#" class="btn btn-primary">App Devlopment</a>
+                        <span class="fw-bold fs-5 opacity-75">$290</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">App Dev</h5>
+                        <p class="card-text">Process of designing, creating, and developing video software/apps.It can
+                            also refer to individuals.</p>
+                    </div>
+                    <hr class="fw-bolder opacity-75">
+                    <div class="d-flex justify-content-between p-2">
+                        <div>
+                            <img src="./images/doshan.jpeg" alt="" class="trainer-img">
+                            <span class="trainer-name fw-semibold fs-4">Dosshan</span>
+                        </div>
+                        <div class="mt-3">
+                            <span class="users"><i class="ri-user-line trainer-name"></i>10k</span>
+                            <span><i class="ri-heart-3-line trainer-name"></i>9.9k</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/tekken.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex justify-content-between">
+                        <a href="#" class="btn btn-primary">Game Devlopment</a>
+                        <span class="fw-bold fs-5 opacity-75">$250</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">VR Game Dev</h5>
+                        <p class="card-text">Virtual reality games.In which player fight physically in reality and win
+                            on the behalf of himself/herslf.</p>
+                    </div>
+                    <hr class="fw-bolder opacity-75">
+                    <div class="d-flex justify-content-between p-2">
+                        <div>
+                            <img src="./images/raone_0.jpg" alt="" class="trainer-img">
+                            <span class="trainer-name fw-semibold fs-4">Ra.One</span>
+                        </div>
+                        <div class="mt-3">
+                            <span class="users"><i class="ri-user-line trainer-name"></i>5k</span>
+                            <span><i class="ri-heart-3-line trainer-name"></i>5k</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- THREE INTRO CARDS 3 div in single col// -->
+    <div class="container">
+        <div class="row mb-5 mt-5 trainer-info">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/trainer-4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h2 class="fs-3">Walter White</h2>
+                        <P class="fst-italic opacity-75">Web Developer</P>
+                        <p class="card-text fst-italic opacity-50">The process of building, programming, and maintaining
+                            websites and web applications.</p>
+                        <div class="navbar-icons">
+                            <a href="#" class="nav-icon fs-5"><i class="ri-close-fill"></i></a>
+                            <a href="#" class="nav-icon fs-5"><i class="ri-facebook-circle-fill"></i></a>
+                            <a href="#" class="nav-icon fs-5"><i class="ri-instagram-line"></i></a>
+                            <a href="#" class="nav-icon fs-5"><i class="ri-linkedin-box-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="2500">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/trainer-5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h2 class="fs-3">Sarah Jhinson</h2>
+                        <P class="fst-italic opacity-75">Marketing</P>
+                        <p class="card-text fst-italic opacity-50">Process of promoting and selling products or services
+                            to a target audience.</p>
+                        <div class="navbar-icons">
+                            <a href="#" class="nav-icon fs-5"><i class="ri-close-fill"></i></a>
+                            <a href="#" class="nav-icon fs-5"><i class="ri-facebook-circle-fill"></i></a>
+                            <a href="#" class="nav-icon fs-5"><i class="ri-instagram-line"></i></a>
+                            <a href="#" class="nav-icon fs-5"><i class="ri-linkedin-box-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="3500">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/trainer-6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h2 class="fs-3">William Anderson</h2>
+                        <P class="fst-italic opacity-75">Content Writer</P>
+                        <p class="card-text fst-italic opacity-50">A Website content writer or web content writer is
+                            specializes in providing content for websites.</p>
+                        <div class="navbar-icons">
+                            <a href="#" class="nav-icon fs-5"><i class="ri-close-fill"></i></a>
+                            <a href="#" class="nav-icon fs-5"><i class="ri-facebook-circle-fill"></i></a>
+                            <a href="#" class="nav-icon fs-5"><i class="ri-instagram-line"></i></a>
+                            <a href="#" class="nav-icon fs-5"><i class="ri-linkedin-box-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MENTOR FOOTER// -->
+    <footer class="footer">
+        <div class="container footer-details">
+            <div class="footer-info">
+                <h3>Mentor</h3>
+                <p>
+                    A108 Adam Street<br>
+                    New York, NY 535022<br><br>
+                    <strong>Phone:</strong> +92 308 000 05<br>
+                    <strong>Email:</strong> ramzanchhena@gmail.com<br>
+                </p>
+                <div class="social-links opacity-75">
+                    <a href="#" class="twitter"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="#" class="facebook"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#" class="instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="linkedin"><i class="ri-linkedin-box-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-services">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Product Management</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Our Newsletter</h4>
+                <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                <form action="#">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© Copyright <strong>Mentor</strong>. All Rights Reserved</p>
+            <p>Designed by <span class="gc">BootstrapMade</span> Distributed by <span class="gc">ThemeWagon</span></p>
+        </div>
+    </footer>
+    <!-- Font Awesome CDN for icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>
